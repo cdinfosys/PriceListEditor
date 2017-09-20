@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ebe7a655-0b7d-40d5-af1f-4f4c75ffbb72" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PriceListService.wsdl" MetadataType="Wsdl" ID="b3c85836-8d08-47bf-b251-10402b731c7f" SourceId="1" SourceUrl="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc?wsdl" />
+    <MetadataFile FileName="PriceListWcfService.disco" MetadataType="Disco" ID="ff2d9ee8-7184-4517-858e-43e9f0f4a62e" SourceId="1" SourceUrl="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc?disco" />
+    <MetadataFile FileName="PriceListWcfService3.xsd" MetadataType="Schema" ID="cadc0180-924a-4814-b8bd-aa6b251e89d5" SourceId="1" SourceUrl="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PriceListWcfService.xsd" MetadataType="Schema" ID="474694ed-a245-41cf-9667-53daaf284ddc" SourceId="1" SourceUrl="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PriceListWcfService1.xsd" MetadataType="Schema" ID="a50824bb-9a81-42a6-ac2b-1516ba015139" SourceId="1" SourceUrl="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PriceListWcfService2.xsd" MetadataType="Schema" ID="52a9e099-a53e-4780-940b-207c219c8c7f" SourceId="1" SourceUrl="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PriceListWcfService31.xsd" MetadataType="Schema" ID="1cfb4a1a-ef41-404b-bc71-c8daf9c80feb" SourceId="1" SourceUrl="http://pricelistservice.cdinfosys.co.za/PriceListWcfService.PriceListService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

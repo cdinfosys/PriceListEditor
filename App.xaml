@@ -1,0 +1,9 @@
+﻿<Application x:Class="PriceListEditor.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PriceListEditor"
+             xmlns:views="clr-namespace:PriceListEditor.Views;assembly=PriceListEditor.Views">
+    <Application.Resources>
+        <ResourceDictionary Source="GlobalStyles.xaml"/>
+    </Application.Resources>
+</Application>
