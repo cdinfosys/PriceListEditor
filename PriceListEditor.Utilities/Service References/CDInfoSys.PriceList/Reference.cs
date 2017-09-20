@@ -8,84 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PriceListEditor.PriceListService {
+namespace PriceListEditor.Utilities.CDInfoSys.PriceList {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ResponseHeader", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PriceListEditor.PriceListService.Supplier_Suppliers))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PriceListEditor.Utilities.CDInfoSys.PriceList.GetSuppliersResponse))]
     public partial class ResponseHeader : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ErrorCodeField;
+        private PriceListEditor.Utilities.CDInfoSys.PriceList.ResponseErrorCode ErrorCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ErrorDescriptionField;
@@ -101,7 +41,7 @@ namespace PriceListEditor.PriceListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ErrorCode {
+        public PriceListEditor.Utilities.CDInfoSys.PriceList.ResponseErrorCode ErrorCode {
             get {
                 return this.ErrorCodeField;
             }
@@ -138,15 +78,22 @@ namespace PriceListEditor.PriceListService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_Suppliers", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UpdateSuppliersResponse", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts")]
     [System.SerializableAttribute()]
-    public partial class Supplier_Suppliers : PriceListEditor.PriceListService.ResponseHeader {
+    public partial class UpdateSuppliersResponse : PriceListEditor.Utilities.CDInfoSys.PriceList.ResponseHeader {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetSuppliersResponse", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class GetSuppliersResponse : PriceListEditor.Utilities.CDInfoSys.PriceList.ResponseHeader {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PriceListEditor.PriceListService.Supplier_SupplierDetail[] SuppliersField;
+        private PriceListEditor.Utilities.CDInfoSys.PriceList.SupplierDTO[] SuppliersField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PriceListEditor.PriceListService.Supplier_SupplierDetail[] Suppliers {
+        public PriceListEditor.Utilities.CDInfoSys.PriceList.SupplierDTO[] Suppliers {
             get {
                 return this.SuppliersField;
             }
@@ -159,11 +106,23 @@ namespace PriceListEditor.PriceListService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseErrorCode", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts")]
+    public enum ResponseErrorCode : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NoError = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ExceptionCaught = 1,
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_SupplierDetail", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierDTO", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts.Supplie" +
+        "r")]
     [System.SerializableAttribute()]
-    public partial class Supplier_SupplierDetail : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class SupplierDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -268,36 +227,75 @@ namespace PriceListEditor.PriceListService {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PriceListService.IPriceListService")]
-    public interface IPriceListService {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UpdateSuppliersRequest", Namespace="http://schemas.datacontract.org/2004/07/PriceListWcfService.DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class UpdateSuppliersRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetData", ReplyAction="http://tempuri.org/IPriceListService/GetDataResponse")]
-        string GetData(int value);
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetData", ReplyAction="http://tempuri.org/IPriceListService/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PriceListEditor.Utilities.CDInfoSys.PriceList.SupplierDTO[] SupplierRecordsField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IPriceListService/GetDataUsingDataContractResponse")]
-        PriceListEditor.PriceListService.CompositeType GetDataUsingDataContract(PriceListEditor.PriceListService.CompositeType composite);
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IPriceListService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<PriceListEditor.PriceListService.CompositeType> GetDataUsingDataContractAsync(PriceListEditor.PriceListService.CompositeType composite);
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PriceListEditor.Utilities.CDInfoSys.PriceList.SupplierDTO[] SupplierRecords {
+            get {
+                return this.SupplierRecordsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierRecordsField, value) != true)) {
+                    this.SupplierRecordsField = value;
+                    this.RaisePropertyChanged("SupplierRecords");
+                }
+            }
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetSupplierDetail", ReplyAction="http://tempuri.org/IPriceListService/GetSupplierDetailResponse")]
-        PriceListEditor.PriceListService.Supplier_Suppliers GetSupplierDetail();
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetSupplierDetail", ReplyAction="http://tempuri.org/IPriceListService/GetSupplierDetailResponse")]
-        System.Threading.Tasks.Task<PriceListEditor.PriceListService.Supplier_Suppliers> GetSupplierDetailAsync();
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IPriceListServiceChannel : PriceListEditor.PriceListService.IPriceListService, System.ServiceModel.IClientChannel {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CDInfoSys.PriceList.IPriceListService")]
+    public interface IPriceListService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetSuppliers", ReplyAction="http://tempuri.org/IPriceListService/GetSuppliersResponse")]
+        PriceListEditor.Utilities.CDInfoSys.PriceList.GetSuppliersResponse GetSuppliers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/GetSuppliers", ReplyAction="http://tempuri.org/IPriceListService/GetSuppliersResponse")]
+        System.Threading.Tasks.Task<PriceListEditor.Utilities.CDInfoSys.PriceList.GetSuppliersResponse> GetSuppliersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/UpdateSuppliers", ReplyAction="http://tempuri.org/IPriceListService/UpdateSuppliersResponse")]
+        PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersResponse UpdateSuppliers(System.DateTime clientUtcTime, PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersRequest supplierDataIn);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPriceListService/UpdateSuppliers", ReplyAction="http://tempuri.org/IPriceListService/UpdateSuppliersResponse")]
+        System.Threading.Tasks.Task<PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersResponse> UpdateSuppliersAsync(System.DateTime clientUtcTime, PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersRequest supplierDataIn);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IPriceListServiceChannel : PriceListEditor.Utilities.CDInfoSys.PriceList.IPriceListService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PriceListServiceClient : System.ServiceModel.ClientBase<PriceListEditor.PriceListService.IPriceListService>, PriceListEditor.PriceListService.IPriceListService {
+    public partial class PriceListServiceClient : System.ServiceModel.ClientBase<PriceListEditor.Utilities.CDInfoSys.PriceList.IPriceListService>, PriceListEditor.Utilities.CDInfoSys.PriceList.IPriceListService {
         
         public PriceListServiceClient() {
         }
@@ -318,28 +316,20 @@ namespace PriceListEditor.PriceListService {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public PriceListEditor.Utilities.CDInfoSys.PriceList.GetSuppliersResponse GetSuppliers() {
+            return base.Channel.GetSuppliers();
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<PriceListEditor.Utilities.CDInfoSys.PriceList.GetSuppliersResponse> GetSuppliersAsync() {
+            return base.Channel.GetSuppliersAsync();
         }
         
-        public PriceListEditor.PriceListService.CompositeType GetDataUsingDataContract(PriceListEditor.PriceListService.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
+        public PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersResponse UpdateSuppliers(System.DateTime clientUtcTime, PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersRequest supplierDataIn) {
+            return base.Channel.UpdateSuppliers(clientUtcTime, supplierDataIn);
         }
         
-        public System.Threading.Tasks.Task<PriceListEditor.PriceListService.CompositeType> GetDataUsingDataContractAsync(PriceListEditor.PriceListService.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
-        }
-        
-        public PriceListEditor.PriceListService.Supplier_Suppliers GetSupplierDetail() {
-            return base.Channel.GetSupplierDetail();
-        }
-        
-        public System.Threading.Tasks.Task<PriceListEditor.PriceListService.Supplier_Suppliers> GetSupplierDetailAsync() {
-            return base.Channel.GetSupplierDetailAsync();
+        public System.Threading.Tasks.Task<PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersResponse> UpdateSuppliersAsync(System.DateTime clientUtcTime, PriceListEditor.Utilities.CDInfoSys.PriceList.UpdateSuppliersRequest supplierDataIn) {
+            return base.Channel.UpdateSuppliersAsync(clientUtcTime, supplierDataIn);
         }
     }
 }

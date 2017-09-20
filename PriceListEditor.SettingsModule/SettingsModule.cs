@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.Unity;
 using PriceListEditor.Interfaces;
 using PriceListEditor.Module.Settings.Properties;
+using PriceListEditor.Module.Settings.Views;
 
 namespace PriceListEditor
 {
@@ -20,13 +21,18 @@ namespace PriceListEditor
                 ///     Stores a reference to a Unity container object.
                 /// </summary>
                 private IUnityContainer mUnityContainer;
+
+                /// <summary>
+                ///     The only instance of the main view.
+                /// </summary>
+                private SettingsModuleMainView mMainView = null;
                 #endregion Private data members
 
                 #region ILoadableModule implementation
                 /// <summary>
                 ///     Return an icon of a gear
                 /// </summary>
-                public String IconCharacter => "\u2699";
+                public String IconCharacter => "\uE2F9";// "\u2699";
 
                 /// <summary>
                 ///     The module is always enabled.
@@ -38,12 +44,20 @@ namespace PriceListEditor
                 /// </summary>
                 public Int32 MenuIndex => 0x7FFFF000;
 
+                /// <summary>
+                ///     Gets a string of text that describes the module.
+                /// </summary>
                 public String ModuleDescription => Resources.ModuleDescription;
 
                 /// <summary>
                 ///     Label of the item in the menu.
                 /// </summary>
                 public String ModuleName => Resources.ModuleTitle;
+
+                /// <summary>
+                ///     Gets the main view for the module.
+                /// </summary>
+                public Object ModuleView => mMainView ?? (mMainView = new SettingsModuleMainView());
 
                 /// <summary>
                 ///     Called when the module is loaded into memory.

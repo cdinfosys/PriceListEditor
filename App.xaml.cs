@@ -17,6 +17,10 @@ namespace PriceListEditor
         /// <param name="eventArgs"></param>
         protected override void OnStartup(StartupEventArgs eventArgs)
         {
+            //PriceListService.PriceListServiceClient client1 = new PriceListService.PriceListServiceClient();
+            //PriceListService.CompositeType ct = new PriceListService.CompositeType();
+            //var a = client1.GetSupplierDetail();
+
             try
             {
                 base.OnStartup(eventArgs);

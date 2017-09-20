@@ -33,9 +33,14 @@ namespace PriceListEditor
             Int32 MenuIndex { get; }
 
             /// <summary>
-            ///     A flag to indicate if the module is enabled or disabled in the module.
+            ///     A flag to indicate if the module is enabled or disabled in the main window.
             /// </summary>
             Boolean IsModuleEnabled { get; }
+
+            /// <summary>
+            ///     Gets the main view for the module.
+            /// </summary>
+            Object ModuleView { get; }
             #endregion Public properties
 
             #region Public accessor methods

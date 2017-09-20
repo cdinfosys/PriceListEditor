@@ -42,13 +42,13 @@ namespace PriceListEditor
 
                 InitializeComponent();
 
+                mViewModel.ActiveView = mViewModel.DefaultView = new DefaultView();
                 this.DataContext = mViewModel;
 
             //PriceListService.PriceListServiceClient client1 = new PriceListService.PriceListServiceClient();
             //var v = client1.GetData(42);
 
-            //PriceListService.CompositeType ct = new PriceListService.CompositeType();
-            //var a = client1.GetSupplierDetail();
+
             }
         }
     }

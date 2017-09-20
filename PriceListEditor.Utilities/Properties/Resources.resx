@@ -120,4 +120,10 @@
   <data name="ModuleLoadingFailed" xml:space="preserve">
     <value>Module [{0}] failed to load.</value>
   </data>
+  <data name="SuppliersModuleDescription" xml:space="preserve">
+    <value>Maintain suppliers</value>
+  </data>
+  <data name="SuppliersModuleName" xml:space="preserve">
+    <value>Suppliers</value>
+  </data>
 </root>

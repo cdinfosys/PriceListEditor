@@ -95,11 +95,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Service References\PriceListService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -124,52 +119,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\PriceListService\PriceListEditor.PriceListService.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\PriceListService\PriceListEditor.PriceListService.Supplier_Suppliers.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\PriceListService\PriceListService.wsdl" />
-    <None Include="Service References\PriceListService\PriceListWcfService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PriceListService\PriceListWcfService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PriceListService\PriceListWcfService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PriceListService\PriceListWcfService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PriceListService\PriceListWcfService31.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\PriceListService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PriceListService\PriceListWcfService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PriceListService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PriceListService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PriceListService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PriceListEditor.Classes\PriceListEditor.Classes.csproj">
@@ -187,6 +142,14 @@
     <ProjectReference Include="PriceListEditor.Model\PriceListEditor.Model.csproj">
       <Project>{0919529c-fa72-420f-943d-c7eccb0eb8dd}</Project>
       <Name>PriceListEditor.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="PriceListEditor.Module.Suppliers\PriceListEditor.Module.Suppliers.csproj">
+      <Project>{510885a0-0dcd-4771-9d16-bbae0e206a92}</Project>
+      <Name>PriceListEditor.Module.Suppliers</Name>
+    </ProjectReference>
+    <ProjectReference Include="PriceListEditor.SettingsModule\PriceListEditor.Module.Settings.csproj">
+      <Project>{95dce583-5c6b-4002-bf12-2170583c7ed3}</Project>
+      <Name>PriceListEditor.Module.Settings</Name>
     </ProjectReference>
     <ProjectReference Include="PriceListEditor.Utilities\PriceListEditor.Utilities.csproj">
       <Project>{1d77c5e8-c8fe-477c-8efe-156a3fbbde8f}</Project>

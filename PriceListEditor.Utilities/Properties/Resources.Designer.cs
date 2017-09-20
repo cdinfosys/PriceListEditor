@@ -68,5 +68,23 @@ namespace PriceListEditor.Utilities.Properties {
                 return ResourceManager.GetString("ModuleLoadingFailed", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maintain suppliers.
+        /// </summary>
+        public static string SuppliersModuleDescription {
+            get {
+                return ResourceManager.GetString("SuppliersModuleDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Suppliers.
+        /// </summary>
+        public static string SuppliersModuleName {
+            get {
+                return ResourceManager.GetString("SuppliersModuleName", resourceCulture);
+            }
+        }
     }
 }

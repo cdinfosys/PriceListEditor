@@ -14,4 +14,9 @@
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="CornerRadius" Value="2"/>
     </Style>
+
+    <Style x:Key="DefaultWindowContentStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="44"/>
+    </Style>
 </ResourceDictionary>

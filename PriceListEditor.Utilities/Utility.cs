@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using NLog;
 using PriceListEditor.Interfaces;
+using PriceListEditor.Utilities.CDInfoSys.PriceList;
 
 namespace PriceListEditor
 {
@@ -30,6 +31,11 @@ namespace PriceListEditor
             /// </summary>
             private static CancellationTokenSource mModuleLoadCancellationToken = new CancellationTokenSource();
 
+            /// <summary>
+            ///     Price list backend service connection.
+            /// </summary>
+            private static PriceListServiceClient mPriceListService = null;
+
             #region Construction
             static Utility()
             {
@@ -52,6 +58,12 @@ namespace PriceListEditor
             ///     Gets the cancellation token for the module loader thread.
             /// </summary>
             public static CancellationTokenSource ModuleLoadCancellationToken => Utility.mModuleLoadCancellationToken;
+
+            /// <summary>
+            ///     Returns the object through which the backend WPF service can be contacted.
+            /// </summary>
+            public static PriceListServiceClient PriceListService => Utility.mPriceListService ?? (Utility.mPriceListService = new PriceListServiceClient());
+
             #endregion Public properties
         } // class Utilities
     } // namespace Utilities

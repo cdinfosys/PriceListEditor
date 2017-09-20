@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using Microsoft.Practices.Unity;
 using Prism.Events;
@@ -112,10 +113,7 @@ namespace PriceListEditor
             /// </param>
             protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
             {
-                if (this.PropertyChanged != null)
-                {
-                    this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-                }
+                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
             #endregion Helper methods.
         } // class ViewModelBase

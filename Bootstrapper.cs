@@ -38,6 +38,7 @@ namespace PriceListEditor
 
             try
             {
+                List<ILoadableModule> rawList = new List<ILoadableModule>();
                 foreach (String modulePath in Settings.Default.PluginModules)
                 {
                     Assembly loadedModule = Assembly.LoadFile(modulePath);
@@ -46,9 +47,11 @@ namespace PriceListEditor
                     // Synchronise access to the loaded modules list.
                     lock(Utility.LoadedModules)
                     {
-                        Utility.LoadedModules.AddRange(loadedModules);
+                        rawList.AddRange(loadedModules);
                     }
                 }
+                Utility.LoadedModules.Clear();
+                Utility.LoadedModules.AddRange(rawList.OrderBy(u => u.MenuIndex).ToList());
             }
             catch (OperationCanceledException ex)
             {
