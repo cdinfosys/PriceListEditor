@@ -14,6 +14,7 @@
         FontFamily="Arial">
     <Window.Resources>
         <converters:LoadedModuleToRadioButtonConverter x:Key="LoadedModuleToRadioButtonConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </Window.Resources>
 
     <Grid>
@@ -114,6 +115,19 @@
                     VerticalAlignment="Stretch"
                     Content="{Binding ActiveView, Mode=OneWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" />
             </Border>
+        </Grid>
+
+        <Grid
+            Grid.Column="0"
+            Grid.Row="0"
+            Visibility="{Binding Path=IsMainWindowDisabled , Converter={StaticResource BooleanToVisibilityConverter}}"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch">
+            <Grid.Background>
+                <SolidColorBrush 
+                    Color="DarkGray"
+                    Opacity="0.6"/>
+            </Grid.Background>
         </Grid>
     </Grid>
 </Window>

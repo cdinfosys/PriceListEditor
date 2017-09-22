@@ -44,11 +44,6 @@ namespace PriceListEditor
 
                 mViewModel.ActiveView = mViewModel.DefaultView = new DefaultView();
                 this.DataContext = mViewModel;
-
-            //PriceListService.PriceListServiceClient client1 = new PriceListService.PriceListServiceClient();
-            //var v = client1.GetData(42);
-
-
             }
         }
     }

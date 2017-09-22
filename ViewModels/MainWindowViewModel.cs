@@ -45,6 +45,11 @@ namespace PriceListEditor
             ///     Backing member for the DefaultView property.
             /// </summary>
             private Object mDefaultView = null;
+
+            /// <summary>
+            ///     Backing member for the IsMainWindowDisabled property.
+            /// </summary>
+            private Boolean mIsMainWindowDisabled = true;
             #endregion Private data members
 
 
@@ -57,6 +62,14 @@ namespace PriceListEditor
                     () => 
                     {
                          DisplayLoadedModules();
+                    }
+                );
+
+                eventAggregator.GetEvent<BackendServiceAvailabilityConfirmedEvent>().Subscribe
+                (
+                    (u) =>
+                    {
+                        IsMainWindowDisabled = u ? false : true;
                     }
                 );
             }
@@ -96,6 +109,21 @@ namespace PriceListEditor
                         mSwitchActiveModulesCancellationTokenSource = new CancellationTokenSource();
                         SwitchActiveModules(previousModule, value, mSwitchActiveModulesCancellationTokenSource.Token);
                     }
+                }
+            }
+
+            /// <summary>
+            ///     Gets or sets a flag that indicates if the main window is enabled or disabled.
+            /// </summary>
+            public Boolean IsMainWindowDisabled
+            {
+                get
+                {
+                    return this.mIsMainWindowDisabled;
+                }
+                set
+                {
+                    SetProperty<Boolean>(ref this.mIsMainWindowDisabled, value);
                 }
             }
 
@@ -168,8 +196,11 @@ namespace PriceListEditor
             {
                 try
                 {
-                    System.Diagnostics.Debug.WriteLine("Activated " + module.ModuleName);
-                    this.mSelectedModule?.ActivateModule();
+                    if (module != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Activated " + module.ModuleName);
+                        this.mSelectedModule.ActivateModule();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -181,8 +212,11 @@ namespace PriceListEditor
             {
                 try
                 {
-                    System.Diagnostics.Debug.WriteLine("Deactivated " + module.ModuleName);
-                    this.mSelectedModule?.DeactivateModule();
+                    if (module != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Deactivated " + module.ModuleName);
+                        this.mSelectedModule.DeactivateModule();
+                    }
                 }
                 catch (Exception ex)
                 {

@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="ButtonIconTextState.cs" />
     <Compile Include="Converters\LoadedModuleToRadioButtonConverter.cs" />
+    <Compile Include="Converters\StringListToStringConverter.cs" />
+    <Compile Include="DataStorageItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

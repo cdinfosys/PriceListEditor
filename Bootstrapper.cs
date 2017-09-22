@@ -36,6 +36,24 @@ namespace PriceListEditor
             Application.Current.MainWindow.Show();
             IEventAggregator eventAggregator = Container.Resolve<IEventAggregator>();
 
+            await Utility.PriceListService.CheckIfAliveAsync(42).ContinueWith
+            (
+                task =>
+                {
+                    if (task.IsFaulted)
+                    {
+                        Utility.EventLogger.Log(LogLevel.Error, task.Exception);
+                        // Let everyone know that the backend service is available.
+                        eventAggregator.GetEvent<BackendServiceAvailabilityConfirmedEvent>().Publish(false);
+                    }
+                    else
+                    {
+                        // Let everyone know that the backend service is available.
+                        eventAggregator.GetEvent<BackendServiceAvailabilityConfirmedEvent>().Publish(true);
+                    }
+                }
+            );
+
             try
             {
                 List<ILoadableModule> rawList = new List<ILoadableModule>();

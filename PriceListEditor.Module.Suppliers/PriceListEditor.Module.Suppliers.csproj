@@ -93,6 +93,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\PriceListEditor.DTO\PriceListEditor.DTO.csproj">
+      <Project>{ab4c7778-9ad6-445b-9155-1251f2b6ae40}</Project>
+      <Name>PriceListEditor.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PriceListEditor.Classes\PriceListEditor.Classes.csproj">
+      <Project>{3c608c67-b24c-4e81-9214-2ec44a932660}</Project>
+      <Name>PriceListEditor.Classes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PriceListEditor.Interfaces\PriceListEditor.Interfaces.csproj">
       <Project>{a8205240-051e-4c96-8712-6b83becb4358}</Project>
       <Name>PriceListEditor.Interfaces</Name>

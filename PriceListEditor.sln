@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListEditor.Events", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListEditor.Module.Suppliers", "PriceListEditor.Module.Suppliers\PriceListEditor.Module.Suppliers.csproj", "{510885A0-0DCD-4771-9D16-BBAE0E206A92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListEditor.DTO", "..\PriceListEditor.DTO\PriceListEditor.DTO.csproj", "{AB4C7778-9AD6-445B-9155-1251F2B6AE40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{510885A0-0DCD-4771-9D16-BBAE0E206A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{510885A0-0DCD-4771-9D16-BBAE0E206A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{510885A0-0DCD-4771-9D16-BBAE0E206A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB4C7778-9AD6-445B-9155-1251F2B6AE40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB4C7778-9AD6-445B-9155-1251F2B6AE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB4C7778-9AD6-445B-9155-1251F2B6AE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB4C7778-9AD6-445B-9155-1251F2B6AE40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
